@@ -19,7 +19,6 @@
 
     - name: Adding group to Docker
       shell:
-        groupadd docker
         usermod -aG docker rodriguez
 
     - name: Enable/Restart Docker (Ubuntu)
