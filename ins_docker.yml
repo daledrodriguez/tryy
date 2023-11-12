@@ -45,7 +45,7 @@
 
     - name: Dockerfile Configuration
       docker_image:
-        name: activity11
+        name: HOA11
         build:
           path: ./root/demo-dockerfile
           args:
