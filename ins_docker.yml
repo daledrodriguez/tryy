@@ -1,12 +1,7 @@
 - hosts: web_servers
   become: true
   pre_tasks:
-    - name: Install Updates (Ubuntu)
-      apt:
-        upgrade: dist
-        update_cache: yes
-      when: ansible_distribution == "Ubuntu"
-
+  
     - name: dpkg for Ubuntu
       shell:
         dpkg --configure -a
@@ -24,7 +19,7 @@
 
     - name: Adding group to Docker
       shell:
-        usermod -aG docker rouj
+        usermod -aG docker rodriguez
 
     - name: Enable/Restart Docker (Ubuntu)
       service:
