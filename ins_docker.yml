@@ -42,16 +42,7 @@
         owner: root
         group: root
         mode: '0755'
-
-    - name: Dockerfile Configuration
-      docker_image:
-        name: HOA11
-        build:
-          path: ./root/demo-dockerfile
-          args:
-            listen_port: 8080
-        state: present
-
+        
     - name: Accessing the Container
       shell:
         docker run -it -d -p 8080:80 HOA11
