@@ -45,7 +45,7 @@
         
     - name: Accessing the Container
       shell:
-        docker run -it -d -p 8080:80 HOA11
+        docker run -it -d -p 8080:80 hoa11
 
 - hosts: db_servers
   become: true
