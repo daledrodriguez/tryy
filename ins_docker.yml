@@ -43,10 +43,6 @@
         group: root
         mode: '0755'
         
-    - name: Accessing the Container
-      shell:
-        docker run -it -d -p 8080:80 hoa11
-
 - hosts: db_servers
   become: true
   pre_tasks:
